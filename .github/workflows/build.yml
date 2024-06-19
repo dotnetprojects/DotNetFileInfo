@@ -39,7 +39,7 @@ jobs:
       - uses: microsoft/setup-msbuild@v2.0.0
 
       - name: Build
-        run: dotnet build --no-restore DotNetFileInfo
+        run: dotnet build DotNetFileInfo
 
       - name: Create output directory
         run: New-Item -ItemType Directory -Path C:\builtfiles\DotNetFileInfo -Force > $null
