@@ -1,0 +1,25 @@
+﻿<Window x:Class="DotNetFileInfo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DotNetFileInfo"
+        mc:Ignorable="d"
+        Title="DotNetFileInfo" Height="450" Width="800">
+    <Grid AllowDrop="True" PreviewDragOver="Grid_DragOver" PreviewDrop="Grid_Drop" Background="Transparent">
+        <Button x:Name="btnFile" Content="..." Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="40" Click="btnFile_Click"/>
+        <TabControl Margin="10,10,10,10">
+            <TabItem Header="Assembly">
+                <Grid>
+                    <DataGrid x:Name="grdAssembly" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Asembly.Modules[0]">
+                <Grid>
+                    <DataGrid x:Name="grdModule" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
